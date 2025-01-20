@@ -6,49 +6,53 @@ use OpenAI\Client;
 
 class QuestionGenerator
 {
-    public function __construct(private Client $openAi)
+    private Client $openAi;
+
+    public function __construct(Client $openAi)
     {
+        $this->openAi = $openAi;
     }
 
     public function generateQuestions(string $notes): array
     {
         try {
             $response = $this->openAi->chat()->create([
-                'model' => 'gpt-3.5-turbo', // or 'gpt-4'
+                'model' => 'gpt-4',
                 'messages' => [
                     [
                         'role' => 'system',
-                        'content' => 'You are a quiz generator. Generate multiple-choice questions from the given notes. Return the result as a JSON array with the structure: [{"question": "...", "answers": ["...", "...", "..."], "correct": 0}].',
+                        'content' => 'You are an assistant that generates valid JSON-formatted multiple-choice questions. The input notes may be in markdown format. Ignore markdown formatting and focus on extracting relevant information for questions.',
                     ],
                     [
                         'role' => 'user',
-                        'content' => $notes,
+                        'content' => "Generate exactly 5 multiple-choice questions based on the following notes. Each question should include a 'question', an 'options' array with 4 options, and an 'answer' indicating the correct option. Only return valid JSON with no explanations or additional text:\n\n" . $notes,
                     ],
                 ],
-                'max_tokens' => 500,
-                'temperature' => 0.7,
+                'max_tokens' => 1000,
+                'temperature' => 0.5,
             ]);
 
-            // Extract the content field
-            $content = $response->choices[0]->message->content ?? null;
+            $content = $response->choices[0]->message->content ?? '';
 
-            if (!$content) {
-                throw new \RuntimeException("API response is missing content.");
-            }
+            // Remove backticks or code block markers
+            $content = preg_replace('/^```json|```$/m', '', $content);
 
-            // Remove ```json and ``` if present
-            $cleanedContent = preg_replace('/^```json\s*|\s*```$/', '', $content);
-
-            // Decode the cleaned JSON string into an array
-            $questions = json_decode($cleanedContent, true);
+            // Decode JSON
+            $questions = json_decode($content, true);
 
             if (json_last_error() !== JSON_ERROR_NONE) {
-                throw new \RuntimeException("Failed to parse JSON: " . json_last_error_msg());
+                throw new \RuntimeException('Invalid JSON: ' . json_last_error_msg());
+            }
+
+            // Ensure the structure is correct
+            if (!isset($questions[0]['question'], $questions[0]['options'], $questions[0]['answer'])) {
+                throw new \RuntimeException('Malformed questions structure.');
             }
 
             return $questions;
         } catch (\Exception $e) {
-            throw new \RuntimeException("Failed to generate questions: " . $e->getMessage());
+            error_log("Error generating questions: " . $e->getMessage());
+            return [];
         }
     }
 }

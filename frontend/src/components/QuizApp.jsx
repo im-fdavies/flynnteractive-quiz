@@ -1,30 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import QuestionCard from './QuestionCard';
 import ScoreModal from './ScoreModal';
+import ImportModal from './ImportModal';
 
 const QuizApp = () => {
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [showModal, setShowModal] = useState(false);
+  const [showImportModal, setShowImportModal] = useState(false);
   const [incorrectQuestions, setIncorrectQuestions] = useState([]);
   const [totalAnswered, setTotalAnswered] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Fetch questions from the backend
+  // Fetch default questions
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://localhost:8000'); // Replace with your backend URL
+        const response = await fetch('http://localhost:8000');
         const data = await response.json();
+
+        console.log('Fetched data:', data);
 
         if (!data.success) {
           throw new Error(data.error || 'Failed to fetch questions.');
         }
 
-        setQuestions(data.questions);
+        // Handle nested structure if it exists
+        const questions = data.questions;
+
+        setQuestions(questions);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -32,6 +39,7 @@ const QuizApp = () => {
       }
     };
 
+    // Call the async function
     fetchQuestions();
   }, []);
 
@@ -59,8 +67,34 @@ const QuizApp = () => {
     setShowModal(false);
   };
 
+  const handleImport = async (notes) => {
+    try {
+      setLoading(true);
+      const response = await fetch('http://localhost:8000/import', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ notes }),
+      });
+
+      const data = await response.json();
+
+      console.log(data);
+
+      if (!data.success) {
+        throw new Error(data.error || 'Failed to process notes.');
+      }
+
+      setQuestions(data.questions);
+      setShowImportModal(false);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   if (loading) {
-    return <div className="text-center mt-10">Loading questions...</div>;
+    return <div className="text-center mt-10">Loading...</div>;
   }
 
   if (error) {
@@ -73,12 +107,20 @@ const QuizApp = () => {
           <div className="text-lg font-bold">
             {totalAnswered}/{questions.length} Answered
           </div>
-          <button
-              className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
-              onClick={() => setShowModal(true)}
-          >
-            Show Incorrect
-          </button>
+          <div>
+            <button
+                className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 mr-2"
+                onClick={() => setShowModal(true)}
+            >
+              Show Incorrect
+            </button>
+            <button
+                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+                onClick={() => setShowImportModal(true)}
+            >
+              Import Notes
+            </button>
+          </div>
         </header>
         {questions.length > 0 && !showModal ? (
             <QuestionCard
@@ -95,6 +137,12 @@ const QuizApp = () => {
                 incorrectQuestions={incorrectQuestions}
                 onRestart={restartQuiz}
                 onClose={() => setShowModal(false)}
+            />
+        )}
+        {showImportModal && (
+            <ImportModal
+                onSubmit={handleImport}
+                onClose={() => setShowImportModal(false)}
             />
         )}
       </div>

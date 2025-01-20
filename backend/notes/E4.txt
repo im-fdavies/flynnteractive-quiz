@@ -1,97 +1,317 @@
-By the end of this section you should be able to:
-
-- Explain what is meant by the terms:
-    - Main equipotential bonding
-        -
-    - Supplementary bonding
-- Describe how to carry out temporary earth continuity bonding
-
 # Introduction
 
-Earthing and bonding is vitally important. you must be able to determine whether it has been installed correctly, as you may be required to carry out work on these systems. However, you should only do so if you are competent and if you are not sure, you must contact a qualified electrician.
+Every year there are around 1,000 accidents at work involving electrical shock or burns.
 
-# Equipotential bonding
-
-<aside>
-🐴
-
-this is **not** the potential friendship between horses.
-
-</aside>
-
-Equipotential means **everything is at the same electrical potential**, or in simpler terms, everything is “equal” when it comes to electricity.
-
-In your home, metal pipes, appliances, and other conductive parts are connected together with wires. This ensures they all share the same electrical potential. If there’s a fault (like a live wire touching something it shouldn’t), the electricity won’t try to jump to you because all the connected parts are already “level” and safe.
+On average, 30 of these accidents will result in death.
 
 <aside>
 💡
 
-BS 7671 requires the dwelling to become an equipotential zone and to be supplied with devices which provide automatic disconnection of the supply in the event of a fault.
+try not to die
 
 </aside>
 
-## Main equipotential bonding
+When working in the electrical industry you may do work that ranges from replacing damaged accessories to installing an individual circuit; from replacing a consumer unit to completing an entire electrical installation in a new build or re-wire of a premises.
+
+It is therefore essential that you have an in-depth understanding of how a circuit works.
+
+When working on domestic electrical installations, you must be competent in electrical installation requirements and safe systems of work in the following areas:
+
+- **Safe isolating procedures**
+- Understanding the **electrical hazards and risks** to which you may be exposed during your work, and the **precautions to prevent electrical injury**
+- The procedures for preventing electrical injury during installation, commissioning, maintenance, diagnostic testing, fault finding, modification and decommissioning of domestic electrical installations and the safety requirements relating to working on, or near, live electrical systems where there is the risk of electric shock and burns
+- The installation requirements for domestic electrical installations, as specified in **BS 7671** Requirements for Electrical installations
+
+# Safety requirements when working with electricity
+
+### The two most important things here are:
+
+- **Circuit Protection**
+- **Self Isolation**
+
+## Circuit protection
+
+> BS 7671 requires that a circuit is disconnected automatically, should a current greater than that for which it was designed flows through it (**overcurrent**).
+This is to reduce the dangers associated with electric shock, overload, and to prevent damage to the insulation of cables and equipment. To minimise the effects of overcurrent, BS 7671 specifies **maximum disconnection times** that **MUST** be met by the devices used to protect the circuits of the installation.
+>
 
 <aside>
-💡
+ℹ️
 
-Fault protection means: **protection against electric shock under single-fault conditions.**
+BS 7671 says that if too much current flows through a circuit (called **overcurrent**), it needs to disconnect automatically.
 
 </aside>
 
-it has already been explained that exposed conductive parts of the electrical installation are earthed to prevent them from becoming live and to provide a path for fault current to flow to earth.
+This is all about cutting down risks of electric shock, overloads, and stopping damage to cable insulation or equipment. To keep things safe from overcurrent, BS 7671 sets **maximum disconnection times** that the protection devices on circuits **MUST** follow.
 
-Exposed metallic parts not forming part of the electrical installation - such as pipes and structural metalwork - are defined as **‘extraneous conductive parts’.** These are bonded together to prevent dangerous potential differences from existing between them. A potential difference between these parts will also cause a **corrosion current** to flow, resulting in these items of metalwork corroding away if moisture is present.
+For installation which are earthed by means of a conductor in the supply cable - Known as a **TN System (terra neutral system)** - the maximum disconnection time is **0.4 seconds** for circuits up to and including 63A
 
-To prevent this, these extraneous conductive parts are all connected back to the consumer’s main earthing terminal and, thus, are held at the same (equal) potential as the electrical earth. Connecting exposed and extraneous conductive parts to the same electrical earth creates an equipotential zone where dangerous potential differences are minimised.
+For installations which are earthed by means of an earth electrode (a copper rod or plate sunk into the ground outside the building) known as a **TT system** (Terra Terra). The maximum disconnection time is **0.2 seconds** for circuits up to and including 63A.
 
-In a typical domestic premises, having 16mm$^2$ or 25mm$^2$ line and neutral conductors, the earthing conductor connecting the consumer’s main earthing terminal to the supply earth must also be 16mm$^2$.
+For distribution circuits and circuits rated in excess of 63A, the following disconnection times apply:
 
-The main bonding conductors, which connect the pipes, metal framework and service trunking to the main earthing terminal, must have. a minimum CSA of 10mm$^2$. In the case of pipework, these conductors are terminated using earth clamps.
+- Not exceeding 5 seconds for Terra Neutral Systems
+- Not exceeding 1 second for TT systems
+
+### Terra Neutral systems
+
+A TN system is a type of electrical earthing system where the installation is earthed (connected to the ground) using a conductor from the power supply itself. Essentially, the supply cable includes both the live wires and a direct earth connection.
+
+There are different types of TN systems, such as:
+
+- **TN-S:** The earth is provided via a separate conductor, typically the metal sheath of the supply cable.
+- **TN-C-S (PME - Protective Multiple Earthing):** The neutral and earth are combined in one conductor from the supply and then split into separate conductors within the installation.
+
+The purpose of a TN system is to ensure that all exposed conductive parts (like metal casings of appliances) are at the same electrical potential as the earth, reducing the risk of electric shock.
+
+### Terra Terra systems
+
+It essentially means “earth-to-earth.” In this earthing system, the installation’s earthing (grounding) is achieved independently of the supply system’s earth connection.
+
+**TT systems** use a local earth electrode (like an earth rod driven into the ground) to provide the connection to the earth, rather than relying on the supply cable’s earth. This setup is common in rural areas or places where the distribution network does not provide a reliable earth connection.
+
+The main point of a TT system is that the consumer’s installation has its own independent earth connection for safety. This system often relies on a residual current device (RCD) for protection since fault currents need to flow through the local earth.
+
+# Electric shock
+
+there are 2 ways a person can get an electric shock:
+
+- contact with live parts intended to carry current
+- contact with parts not intended to carry current, but which have been made live by a fault
+
+## Contact with live parts intended to carry current
 
 <aside>
-💡
+ℹ️
 
-Earth clamps must be fitted within 600mm of the water stop cock, gas meter and oil tank fuel valve
+Formerly known as ‘**Direct contact**’. BS 7671 uses the definition: “**basic protection”** to describe “protection against electric shock under fault-free conditions”.
 
 </aside>
 
-The pipes must be pint-free and cleaned to a bright metal with wire wool in the locations where the clamps are to be fitted.
+In simpler terms, fault protection means that all exposed conductive parts of the electrical installation (metal-clad switches, sockets etc) are all connected back to the consumer units;s main earthing terminal. The area in which all exposed metalwork is connected to earth is called an **‘equipotential zone’.**
 
-Earth clamps(ECs) should be selected for the environment for which they are to be installed, and are colour-coded as follows.
+## Automatic Disconnection of the Supply (ADS)
 
-- Red (EC14) for dry, non-corrosive atmosphere
-- Blue (EC15) for corrosive or humid conditions
-- Green (EC16) for corrosive or humid conditions, large earth conductors
+if a single fault occurs on the electrical system - such as the line conductor touching the metal casing of a switch - the current is carried safely away to earth through the ‘earth fault loop’. The circuits protective device operates to disconnect the circuit and, if the circuit has been correctly designed, this will be within the aforementioned disconnection times.
+
+This method of protection should be enjanced by installing an RCD.
+
+the RCD monitors the of current flowing in the line and neutral conductors. if an imbalance occurs between them, as would happen with current ‘leaking’ to earth through a fault, the device automatically trips and disconnects the affected circuit(s).
+
+## Contact with parts not intended to carry current, but which have beeen made live by a fault
 
 <aside>
-💡
+ℹ️
 
-In the case of metal framework, such as girders etc, the conductors are terminated by means of a lug secured to a bolt screwed into a tapped hole (tapping the hole helps to preserve the girders structural integrity)
-
-in the case of service trunking, a nut and bolt are used to secure the lug-terminated conductor to the metalwork.
+Formally known as ‘indirect contact, BS 7671 uses the definition **‘fault protection’ to describe ‘protection against electric shock under single-fault conditions”.**
 
 </aside>
 
-# Supplementary bonding
+In simpler terms, fault protection means that all exposed metallic parts of the electrical installation (metal clad switches, sockets etc) and extraneous metallic parts not forming the electrical installation (gas and water pipes, metal framework of buildings, etc) are all connected back to the consumer unit’s main earthing terminal and thus are held at the same (equal) potential as the electrical earth. The area in which all exposed and extraneous metalwork is connected to earth is called an ‘**equipotential zone**’.
 
-Supplementary bonding is required in some locations (i.e. locations containg a bath or shower) and installtions falling within the scope of part 7 of BS 7671 [regumation 415.2]. It can be provided to prevent dangerous potential differences existing beteen the pipes and other extraneous conductive parts, such as metallic waste pipes, radiators, etc. These potential differences can occur if the earth continuity of the copper pipes is disrupted by the use of plastic fittings.
-
-Once again, EC15 earth clamps are used and the pipes must be paint-free and cleaned back to bright metal where the clamps are to be fitted.
-
-Supplementary bonding conductors must have a minimum CSA of:
-
-- 2.5mm$^2$ if the cable is mechanically protected
-- 4mm$^2$ if no mechanical protection is provided for the cable
-
-BS 7671 states the following about the requirements for supplementary bonding in bathrooms:
-
-- **ALL** circuits suppling the location **MUST** be RCD-protected [701.411.3.3]
-- Local supplementary bonding of all metalwork (exposed and extraneous) **MUST** be provided unless the circuits meet the 0.4s (TN) or 0.2(TT) disconnection times specified in regultion 411.3.2 nd are RCD protected. Where RCD protection is provided, supplementary bonding is **NOT** required. [701.415.2]
+# Inspection and testing
 
 <aside>
-💡
+📢
 
-**All bonding conductors must be indentified with green/yellow insulation**
+Before working on any electrical supply you must make sure that its completely dead and that it can’t be switched on accidentally without you knowing.
+
+Not only is this a requirement of the Electricity at Work Regulations but its essential for your personal safety, and that of your customers or co-workers.
 
 </aside>
+
+The approved method of testing if a circuit is live is by using a voltage indicating device, such as a voltage detector.
+
+A tester with multiple functions, such as voltage, continuity, and current can also be used but this is definitely not the preffered method as it is possible to incorrectly configure he instrument and obtain misleading readings.
+
+## Steps for testing
+
+1. **Identify sources of supply**
+
+Before working on an electrical circuit in a home, you need to locate and identify all circuit breakers or fuses supplying power to the circuit you plan to work on. For instance, if you’re replacing a light fixture, find the breaker that supplies power to that circuit in the electrical panel.
+
+it iss not only important that you identify the **type** of supply but you also need to know the **source** of the supply. in domestic dwellings this will be a single phase 230V supply to the circuits.
+
+1. **Isolate**
+
+Once you’ve identified the appropriate breaker, turn it off to isolate the circuit from the power supply. This cuts off the electrical flow to the section where you need to work. In an industrial setting, this might involve opening a disconnect switch to isolate a piece of machinery from the power supply.
+
+1. **Secure Isolation**
+
+After turning off the breaker, use a lock-out device to lock the breaker in the “off” position, and attach a tag indicating that work is being performed and who is responsible. This prevents anyone from accidentally switching the breaker back on while you are working.
+
+1. **Test the Voltage Tester**
+
+Before testing that the circuit is dead, first check your voltage tester on a known live circuit (such as a different live outlet) to ensure it is working properly. This confirms that your tester is functional and capable of detecting voltage.
+
+1. **Test the Equipment is Dead**
+
+Use the voltage tester to check the circuit or equipment you isolated. For example, if you isolated a light switch, place the tester on the wiring to confirm there is no electrical current present. This ensures the equipment is actually dead before you proceed.
+
+1. **Test the Voltage Tester Again**
+
+After confirming the circuit is dead, test the voltage tester once more on a known live source. This final check ensures your tester didn’t fail during the previous steps and verifies that the readings were accurate.
+
+1. **Begin Work**
+
+Now that you have verified the circuit is isolated, secured, and dead, you can safely begin your electrical work, such as replacing the light fixture or performing maintenance.
+
+This sequence of steps ensures maximum safety while working on electrical installations, protecting against accidental re-energization and electrical hazards.
+
+# Identify sources of supply
+
+It is important to identify the **type** of supply as well as the **source** of supply.
+
+in a domestic dwelling, this will be a single phase 230v.
+
+## Types of circuits
+
+The main types of circuits are:
+
+- 32A ring final circuit for 13A socket outlets
+- 6A lighting circuit
+
+In addition to these, you may also encounter:
+
+- 20A radial circuits for 13A socket outlets
+- Spur outlets
+
+### 20A radial circuits
+
+20 amp radial circuits may be used to supply socket outlet circuits provided the floor area served by the circuit is not greater than 50 m$^2$.
+
+Unlike a ring final circuit, the cabling **does not return to the consumer unit** **but terminates at the last socket outlet.**
+
+originally this was done in 2.5mm$^2$ PVC/PVC cable but must now be designed in accordance with Appendix 15 - Ring and Radial Final Circuit Arrangements Regulation 433.1 and Appendix 4 of BS 7671.
+
+### Appendix 15
+
+Appendix 15 of BS 7671 provides guidance on the design and implementation of ring and radial final circuits, particularly for household and similar premises. For radial circuits, it outlines the following configurations:
+
+•	**20 A radial circuit**: Utilizes 2.5 mm² twin and earth (T&E) cable.
+
+•	**30 A or 32 A radial circuit**: Employs 4.0 mm² T&E cable.
+
+These configurations are designed to ensure that the cable’s current-carrying capacity aligns with the circuit’s protective device rating, thereby maintaining safety and compliance. ([The Regs](https://the-regs.co.uk/blog/?p=255))
+
+### Appendix 4
+
+Appendix 4 of BS 7671 offers detailed information on the current-carrying capacities and voltage drop considerations for various cable types and sizes. It includes tables that assist in selecting appropriate cable sizes based on factors such as installation method, ambient temperature, and grouping. When designing a radial circuit, it’s essential to consult these tables to confirm that the chosen cable size can handle the expected load current without exceeding permissible voltage drop limits.
+
+In summary, while Appendix 15 provides standard configurations for radial circuits, Appendix 4 should be referenced to ensure that the selected cable size is suitable for the specific installation conditions and complies with the current-carrying capacity and voltage drop requirements.
+
+### Cookers, Showers and Immersion Heaters
+
+Cooker and shower circuits have traditionally been wired in 6.0mm$^2$ cable. However, modern appliances are being manufactured with higher KW ratings than were previously available.
+
+This means the current-carrying capacity of 6.0mm$^2$ cable may be insufficient for the increased current demand of these appliances. Cooker and shower circuits must be designed in accordance with BS 7671 to ensure that cables are correctly sized to the appliances as well as the installation method used to install them.
+
+**This is especially important when replacing a shower or a cooker**
+
+<aside>
+📢
+
+immersion heaters were traditionally wired in 2.5mm$^2$ cable. Their circuits must also now be designed in accordance with **BS 7671**.
+
+</aside>
+
+# Procedure for installing a non-fused spur
+
+Let's assume the task at hand is installing a non-fused spur to supply a single socket outlet on the ground floor ring final circuit of a domestic premises. The spur will use PVC/PVC cable, and the socket outlet will be surface mounted on the wall with a plastic pattress (surface box).
+
+The installation method, mini-trunking, will not be described here - only the procedure by which the spur and its outlet will be installed. it will also be assumed that the existing ring final circuit meets the requirements of BS 7671 utilising a 30 mA RCD.
+
+## Identification
+
+Locate the socket outlet which is closest to the location in which the additional socket is to be installed. Test this socket to ensure it is live with a voltage tester complying with **GS38**
+
+**dont forget to test the tester with a proving unit or against a known live supply before and after testing the socket.**
+
+Go to the consumer unit and identify which fuse or circuit breaker supplies the ground floor ring final circuit. Ensure that it is okay to turn the circuit off (e.g that no computers, etc, are running off the circuit) and pull the fuse or switch off the breaker to isolate the supply.
+
+## Isolation
+
+### Isolate
+
+Now the type and source of supply have been identified, they need to be isolated.
+
+Regulations require that a means of isolation must be provided to enable skilled persons to carry out work on or near parts which would otherwise normally be energised (live).
+
+Isolating devices, such as fuses, MCBs (Miniature Circuit Breakers), and RCDs (Residual Current Devices), must adhere to British Standards (BS). Specifically, the isolating distance between the contacts must meet the requirements set out in BS EN 60947-3, which governs isolators. This means that the position of the contacts must either be visible externally, or there must be a clear, positive, and reliable indication of whether the contacts are open or closed. This ensures proper isolation and safety during operation or maintenance activities.
+
+The **contacts** in electrical isolating devices refer to the conductive components within switches, fuses, MCBs, RCDs, or isolators that physically touch (close) or separate (open) to make or break the electrical connection in a circuit. When the contacts are closed, current flows through the device, completing the circuit. When they are open, the circuit is broken, and current cannot flow.
+
+In isolating devices, the position of the contacts indicates whether the electrical circuit is live (closed contacts) or isolated (open contacts). Ensuring proper separation (or distance) between open contacts is critical for safety, as it prevents accidental re-connection and maintains effective isolation, which is why standards like BS EN 60947-3 specify their design and performance requirements.
+
+### Secure Isolation
+
+you must make sure that the supply cannot accidentally be turned on. If you have removed a fuse to isolate the circuit iti should be kept in your pocket. If you have turned off a circuit breaker it should be locked off with a suitable ‘dolly-lock’ to which, only you have the keys. As an additional precaution, put up a sign reading “DANGER, DO NOT OPERATE” at the consumer unit.
+
+### Testing isolation
+
+Having proved with your voltage tester again, go to the socket outlet and test to see if it is live.
+
+if it is dead, you may proceed.
+
+if it is still live, **investigate why with extreme caution!**
+
+Refer to the flow chart later on for the procedure to be followed.
+
+## Test equipment
+
+Test equipment must be regularly checked to make sure it is in good and safe working order.
+
+You must ensure that your test equipment has a current calibration certificate, indicating that the instrument is working properly and providing accurate readings.
+
+if the meter is not within calibration, your test results will not be recognised as valid - even if they are accurate.
+
+If you have any doubt about an instrument or its accuracy, ask for assistance. These instruments are very expensive and any unnecessary damage caused by ignorance should be avoided.
+
+- Check the equipment for any damage. Cehck to see if he case is cracked or broken. This could indicate a recent impact, which could result in false readings.
+- Check that the batteries are in good condition and have not leaked and that they’re all the same type.
+- Check the insulation on the leads and the probes is not damaged. check that the insulation is complete and secure.
+- check the operation of the meter with the leads both open and short-circuited.
+- then zero your instrument on the ohm scale.
+
+At this point, we will assume that you have proven isolation of the correct circuit and are ready to begin the installation of the spur and its outlet.
+
+## Preparation
+
+Remove the socket plate from its pattress and inspect the wiring.
+
+You should see two conductors at each terminal.
+
+If you find three conductors it means that a spur has already been taken from this socket and you cannot install another at this point, if this is so, replace the socket. plate and check the next closest socket.
+
+Once you have identified a suitable socket, dosconnect the conductors.
+
+Using a continuity tester (ohmmeter) measure the continuity of the ring final circuit as described in BS 7671 and Guidance note 3.
+
+Cut out a suitable cable entry port and screw the pattress loosely back on the wall. this will facilitate the entry of the cable
+
+install a new pattress in the desired location, having cut out the appropriate cable entry port. Then installl te mini-trunking between the new pattress and the socket outlet.
+
+Run the cabel in the trunking between the two acessories. The cable may be entered, stripped, have its CPC sleeved and its cores terminated to the appropriate terminalss of the additional socket.
+
+## Connecting the spur
+
+Enter the other end of the cable into the existing pattress and finish screwing it back to the wall.
+
+strip the cable, sleeve the [CPC](https://www.notion.so/CPC-1438fb562d6480f3abc8d0e99e1a6dda?pvs=21)‘s and terminate the conductors of the spur with the corresponding cores of the ring circuit conductors to the appropriate terminals. You are now ready to test and certificate your addition.
+
+## Inspection, Testing and certification
+
+The installation should be visually inspected to ensure that all connections are tight and that no damage has occured to the cables and accessories during the installation process.
+
+The ring final circuit and its newly installed spur must now undergo the prescribed tests detailed in BS 7671 and Guidance Note 3. Once testing has been satisfactorily completed and you are confident that all is okay, you can screw the socket plates to their respective pattresses, fit the trunking lid and restore the supply. A function test of the existing and additional sockets should now be performed.
+
+**A Minor Electrical Installation Works Certificate** must now be completed and a copy given to the person who ordered the work.
+
+
+---
+
+# Heres what you should be able to do at the end of this section:
+
+## Describe the safety requirements when working on electrical systems
+
+## Describe the practical requirements for installing appliances and controls on electrical system

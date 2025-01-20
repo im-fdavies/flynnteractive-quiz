@@ -18,19 +18,21 @@ const QuestionCard = ({ question, onAnswer }) => {
         }, 2000);
     };
 
+    const { question: questionText, options = [], answer } = question;
+
     return (
         <div
             className={`p-6 rounded shadow-md transition-colors duration-500 ease-in-out ${bgColor}`}
         >
-            <h2 className="text-xl font-bold mb-4">{question.question}</h2>
+            <h2 className="text-xl font-bold mb-4">{questionText}</h2>
             <ul className="space-y-2">
-                {question.answers.map((answer, index) => (
+                {options.map((option, index) => (
                     <li key={index}>
                         <button
                             className="w-full p-2 bg-gray-200 hover:bg-gray-300 rounded"
-                            onClick={() => handleAnswerClick(index === question.correct)}
+                            onClick={() => handleAnswerClick(option === answer)}
                         >
-                            {answer}
+                            {option}
                         </button>
                     </li>
                 ))}
