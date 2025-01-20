@@ -1,0 +1,97 @@
+By the end of this section you should be able to:
+
+- Explain what is meant by the terms:
+    - Main equipotential bonding
+        -
+    - Supplementary bonding
+- Describe how to carry out temporary earth continuity bonding
+
+# Introduction
+
+Earthing and bonding is vitally important. you must be able to determine whether it has been installed correctly, as you may be required to carry out work on these systems. However, you should only do so if you are competent and if you are not sure, you must contact a qualified electrician.
+
+# Equipotential bonding
+
+<aside>
+🐴
+
+this is **not** the potential friendship between horses.
+
+</aside>
+
+Equipotential means **everything is at the same electrical potential**, or in simpler terms, everything is “equal” when it comes to electricity.
+
+In your home, metal pipes, appliances, and other conductive parts are connected together with wires. This ensures they all share the same electrical potential. If there’s a fault (like a live wire touching something it shouldn’t), the electricity won’t try to jump to you because all the connected parts are already “level” and safe.
+
+<aside>
+💡
+
+BS 7671 requires the dwelling to become an equipotential zone and to be supplied with devices which provide automatic disconnection of the supply in the event of a fault.
+
+</aside>
+
+## Main equipotential bonding
+
+<aside>
+💡
+
+Fault protection means: **protection against electric shock under single-fault conditions.**
+
+</aside>
+
+it has already been explained that exposed conductive parts of the electrical installation are earthed to prevent them from becoming live and to provide a path for fault current to flow to earth.
+
+Exposed metallic parts not forming part of the electrical installation - such as pipes and structural metalwork - are defined as **‘extraneous conductive parts’.** These are bonded together to prevent dangerous potential differences from existing between them. A potential difference between these parts will also cause a **corrosion current** to flow, resulting in these items of metalwork corroding away if moisture is present.
+
+To prevent this, these extraneous conductive parts are all connected back to the consumer’s main earthing terminal and, thus, are held at the same (equal) potential as the electrical earth. Connecting exposed and extraneous conductive parts to the same electrical earth creates an equipotential zone where dangerous potential differences are minimised.
+
+In a typical domestic premises, having 16mm$^2$ or 25mm$^2$ line and neutral conductors, the earthing conductor connecting the consumer’s main earthing terminal to the supply earth must also be 16mm$^2$.
+
+The main bonding conductors, which connect the pipes, metal framework and service trunking to the main earthing terminal, must have. a minimum CSA of 10mm$^2$. In the case of pipework, these conductors are terminated using earth clamps.
+
+<aside>
+💡
+
+Earth clamps must be fitted within 600mm of the water stop cock, gas meter and oil tank fuel valve
+
+</aside>
+
+The pipes must be pint-free and cleaned to a bright metal with wire wool in the locations where the clamps are to be fitted.
+
+Earth clamps(ECs) should be selected for the environment for which they are to be installed, and are colour-coded as follows.
+
+- Red (EC14) for dry, non-corrosive atmosphere
+- Blue (EC15) for corrosive or humid conditions
+- Green (EC16) for corrosive or humid conditions, large earth conductors
+
+<aside>
+💡
+
+In the case of metal framework, such as girders etc, the conductors are terminated by means of a lug secured to a bolt screwed into a tapped hole (tapping the hole helps to preserve the girders structural integrity)
+
+in the case of service trunking, a nut and bolt are used to secure the lug-terminated conductor to the metalwork.
+
+</aside>
+
+# Supplementary bonding
+
+Supplementary bonding is required in some locations (i.e. locations containg a bath or shower) and installtions falling within the scope of part 7 of BS 7671 [regumation 415.2]. It can be provided to prevent dangerous potential differences existing beteen the pipes and other extraneous conductive parts, such as metallic waste pipes, radiators, etc. These potential differences can occur if the earth continuity of the copper pipes is disrupted by the use of plastic fittings.
+
+Once again, EC15 earth clamps are used and the pipes must be paint-free and cleaned back to bright metal where the clamps are to be fitted.
+
+Supplementary bonding conductors must have a minimum CSA of:
+
+- 2.5mm$^2$ if the cable is mechanically protected
+- 4mm$^2$ if no mechanical protection is provided for the cable
+
+BS 7671 states the following about the requirements for supplementary bonding in bathrooms:
+
+- **ALL** circuits suppling the location **MUST** be RCD-protected [701.411.3.3]
+- Local supplementary bonding of all metalwork (exposed and extraneous) **MUST** be provided unless the circuits meet the 0.4s (TN) or 0.2(TT) disconnection times specified in regultion 411.3.2 nd are RCD protected. Where RCD protection is provided, supplementary bonding is **NOT** required. [701.415.2]
+
+<aside>
+💡
+
+**All bonding conductors must be indentified with green/yellow insulation**
+
+</aside>

@@ -9,11 +9,30 @@ const QuizApp = () => {
   const [showModal, setShowModal] = useState(false);
   const [incorrectQuestions, setIncorrectQuestions] = useState([]);
   const [totalAnswered, setTotalAnswered] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
+  // Fetch questions from the backend
   useEffect(() => {
-    fetch('/questions.json')
-        .then((res) => res.json())
-        .then((data) => setQuestions(data));
+    const fetchQuestions = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch('http://localhost:8000'); // Replace with your backend URL
+        const data = await response.json();
+
+        if (!data.success) {
+          throw new Error(data.error || 'Failed to fetch questions.');
+        }
+
+        setQuestions(data.questions);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchQuestions();
   }, []);
 
   const handleAnswer = (isCorrect, question) => {
@@ -40,6 +59,14 @@ const QuizApp = () => {
     setShowModal(false);
   };
 
+  if (loading) {
+    return <div className="text-center mt-10">Loading questions...</div>;
+  }
+
+  if (error) {
+    return <div className="text-center mt-10 text-red-500">{error}</div>;
+  }
+
   return (
       <div className="bg-white p-6 rounded shadow-md w-full max-w-xl">
         <header className="flex justify-between items-center mb-4">
@@ -59,7 +86,7 @@ const QuizApp = () => {
                 onAnswer={handleAnswer}
             />
         ) : (
-            <p>Loading questions...</p>
+            <p>No questions available.</p>
         )}
         {showModal && (
             <ScoreModal
