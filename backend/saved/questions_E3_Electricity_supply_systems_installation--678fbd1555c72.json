@@ -1,0 +1,52 @@
+[
+    {
+        "question": "What is the maximum disconnection time for circuits up to and including 63A in a TN System?",
+        "options": [
+            "0.4 seconds",
+            "0.2 seconds",
+            "1 second",
+            "5 seconds"
+        ],
+        "answer": "0.4 seconds"
+    },
+    {
+        "question": "What is the maximum disconnection time for circuits up to and including 63A in a TT system?",
+        "options": [
+            "0.4 seconds",
+            "0.2 seconds",
+            "1 second",
+            "5 seconds"
+        ],
+        "answer": "0.2 seconds"
+    },
+    {
+        "question": "What is the purpose of a TN system?",
+        "options": [
+            "To ensure that all exposed conductive parts are at the same electrical potential as the earth",
+            "To ensure that all exposed conductive parts are at a different electrical potential as the earth",
+            "To ensure that the supply cable includes both the live wires and a direct earth connection",
+            "Both A and C"
+        ],
+        "answer": "Both A and C"
+    },
+    {
+        "question": "What are the two ways a person can get an electric shock?",
+        "options": [
+            "Contact with live parts intended to carry current",
+            "Contact with parts not intended to carry current, but which have been made live by a fault",
+            "Contact with any electrical equipment",
+            "Both A and B"
+        ],
+        "answer": "Both A and B"
+    },
+    {
+        "question": "What is the approved method of testing if a circuit is live?",
+        "options": [
+            "Using a continuity tester",
+            "Using a voltage indicating device",
+            "Using a current tester",
+            "None of the above"
+        ],
+        "answer": "Using a voltage indicating device"
+    }
+]

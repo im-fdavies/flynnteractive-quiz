@@ -1,0 +1,52 @@
+[
+    {
+        "question": "What is the SI unit for measuring electrical charge?",
+        "options": [
+            "Joule",
+            "Watt",
+            "Coulomb",
+            "Ohm"
+        ],
+        "answer": "Coulomb"
+    },
+    {
+        "question": "Which of the following best describes Potential Difference?",
+        "options": [
+            "It's the rate at which electrical energy is converted into another form",
+            "It's the measure of the amount of power dissipated by a circuit",
+            "It's what drives the energy through the circuit",
+            "It's a measure of the opposition to the flow of current"
+        ],
+        "answer": "It's what drives the energy through the circuit"
+    },
+    {
+        "question": "What is the formula for calculating Power (P)?",
+        "options": [
+            "P = VI",
+            "P = I\/R",
+            "P = V\/R",
+            "P = IR"
+        ],
+        "answer": "P = VI"
+    },
+    {
+        "question": "What is the unit of measurement for resistance in an electrical circuit?",
+        "options": [
+            "Ampere",
+            "Volt",
+            "Ohm",
+            "Watt"
+        ],
+        "answer": "Ohm"
+    },
+    {
+        "question": "Which of the following best describes the role of a fuse in an electrical circuit?",
+        "options": [
+            "To increase the current flow",
+            "To reduce the resistance",
+            "To break the circuit when too much current flows",
+            "To boost the voltage"
+        ],
+        "answer": "To break the circuit when too much current flows"
+    }
+]

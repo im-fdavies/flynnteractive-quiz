@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 
 const ImportModal = ({ onSubmit, onClose }) => {
+    const [title, setTotal] = useState('');
     const [notes, setNotes] = useState('');
 
     const handleSubmit = () => {
-        if (notes.trim()) {
-            onSubmit(notes);
+        if (notes.trim() && title.trim()) {
+            onSubmit(title, notes);
         }
     };
 
@@ -13,6 +14,11 @@ const ImportModal = ({ onSubmit, onClose }) => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
             <div className="bg-white p-6 rounded shadow-md w-full max-w-lg">
                 <h2 className="text-lg font-bold mb-4">Import Notes</h2>
+                <input
+                    className="w-full border rounded p-2 mb-4"
+                    placeholder="Title"
+                    onChange={(e) => setTotal(e.target.value)}
+                />
                 <textarea
                     className="w-full border rounded p-2 mb-4"
                     rows="6"

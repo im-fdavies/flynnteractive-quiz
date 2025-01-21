@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { sanitizeString } from '../utilities/sanitizeStrings';
 
 const QuestionCard = ({ question, onAnswer }) => {
     const [feedback, setFeedback] = useState(null);
@@ -24,16 +25,18 @@ const QuestionCard = ({ question, onAnswer }) => {
         <div
             className={`p-6 rounded shadow-md transition-colors duration-500 ease-in-out ${bgColor}`}
         >
-            <h2 className="text-xl font-bold mb-4">{questionText}</h2>
+            <h2
+                className="text-xl font-bold mb-4"
+                dangerouslySetInnerHTML={{ __html: sanitizeString(questionText) }}
+            ></h2>
             <ul className="space-y-2">
                 {options.map((option, index) => (
                     <li key={index}>
                         <button
                             className="w-full p-2 bg-gray-200 hover:bg-gray-300 rounded"
                             onClick={() => handleAnswerClick(option === answer)}
-                        >
-                            {option}
-                        </button>
+                            dangerouslySetInnerHTML={{ __html: sanitizeString(option) }}
+                        ></button>
                     </li>
                 ))}
             </ul>

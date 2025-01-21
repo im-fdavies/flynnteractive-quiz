@@ -1,0 +1,52 @@
+[
+    {
+        "question": "What are the two types of equipment for generating electricity?",
+        "options": [
+            "Solar panels and wind turbines",
+            "Nuclear reactors and hydroelectric dams",
+            "Single phase supply and three phase supply",
+            "Gas turbines and steam turbines"
+        ],
+        "answer": "Single phase supply and three phase supply"
+    },
+    {
+        "question": "What voltage does a single phase supply typically deliver?",
+        "options": [
+            "120v",
+            "240v",
+            "360v",
+            "415v"
+        ],
+        "answer": "240v"
+    },
+    {
+        "question": "What is the typical voltage of a three phase supply?",
+        "options": [
+            "120v",
+            "240v",
+            "360v",
+            "415v"
+        ],
+        "answer": "415v"
+    },
+    {
+        "question": "What type of supply produces most of the electricity in the UK?",
+        "options": [
+            "Single phase supply",
+            "Three phase supply",
+            "Solar power",
+            "Wind power"
+        ],
+        "answer": "Three phase supply"
+    },
+    {
+        "question": "What is the main purpose of main protective bonding?",
+        "options": [
+            "To increase the efficiency of the electrical system",
+            "To reduce dangerous voltage differences between conductive parts during faults",
+            "To provide a path for lightning to safely reach the ground",
+            "To prevent electrical equipment from overheating"
+        ],
+        "answer": "To reduce dangerous voltage differences between conductive parts during faults"
+    }
+]
